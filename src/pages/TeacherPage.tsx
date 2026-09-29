@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { AppShell } from '../components/AppShell'
 import { activities } from '../data/activities'
 import type { ActivityId } from '../types'
@@ -129,7 +130,7 @@ export function TeacherPage() {
                   <article
                     className={isActive ? 'activity-tile active' : 'activity-tile'}
                     key={activity.id}
-                    style={{ '--activity-accent': activity.accent } as React.CSSProperties}
+                    style={{ '--activity-accent': activity.accent } as CSSProperties}
                   >
                     <div className="activity-tile-top">
                       <div className="activity-number">{String(index + 1).padStart(2, '0')}</div>
